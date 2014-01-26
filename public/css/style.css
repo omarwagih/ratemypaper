@@ -1,0 +1,271 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+
+.rating-stars img{
+	height:25px;
+}
+
+.rating-science img, .rating-useful img, .rating-interest img{
+	width:40px;
+}
+
+.article{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	line-height: 1.428571429;
+	margin-top: 20px;
+	margin-bottom: 40px;
+}
+
+.article .title{
+	font-size: 22px;
+	font-weight: 500;
+}
+.article .journal{
+	font-style:italic
+}
+.article .volume{
+	font-weight: bold;
+}
+
+.article .details {
+	font-weight: 200;
+	margin-left: 5%;
+}
+
+.rating-box {
+	border-top: 1px	solid rgba(0,0,0,0.05);
+	font-size: 24px;
+}
+
+.rating-box .n-rating{
+	font-size: 18px;
+}
+.rating-box .rating-score{
+	font-size: 18px;
+	font-weight: bolder;
+}
+
+
+
+a{
+	color:  rgba(0,0,0,0.25);
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: none;
+	color:  rgba(0,0,0,0.35);
+}
+
+.dark-text{
+	color:  rgba(0,0,0,0.25);
+}
+
+hr{
+	border-top: 1px solid rgba(0,0,0,0.05);
+}
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 0px;
+  background: #f8f8f8;
+  color: #7c8d87 !important;
+
+  background: #81c439;
+  color: rgba(255,255,255,1.0) !important;
+  font-family: 'Lato', sans-serif !important;
+  font-size: 16px;
+}
+
+.header{
+	background: rgba(0,0,0,0.01);
+}
+
+.bg{
+	/*background-image:url('../img/pap.png');
+	background-repeat: no-repeat;*/
+}
+ h1{
+ 	font-family: 'Lato', sans-serif !important;
+ 	font-weight: 700;
+ 	text-transform: uppercase;
+ }
+
+
+.yellow{
+	color:#f1c40f;
+}
+
+.light{
+	opacity: 0.7;
+}
+
+.clickable{
+	cursor: pointer; cursor: hand;
+}
+
+a.ibtn, input.ibtn  {
+	text-decoration: none;
+	outline: none;
+	display: inline-block;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 0.8em;
+	margin: 0.5em 0.3em;
+	letter-spacing: 1px;
+	background: rgba(0,0,0,0.1);
+	padding: 0.4em 0.9em;
+	-webkit-transition: all 0.2s;
+	transition: all 0.2s;
+	color: white;
+	font-size: 14px;
+	border:0px;
+  	border-radius: 2px;
+}
+
+input.ibtn{
+	margin:0px;
+	padding-top:15px;
+	padding-bottom:15px;
+}
+
+a.current, a:hover.ibtn, a:focus.ibtn,
+input:hover.ibtn, input:focus.ibtn {
+	opacity: 1;
+	background: rgba(0,0,0,0.25);
+}
+
+no-margin{
+	margin:0px;
+}
+
+/*Footer stuff*/
+.list-unstyled {
+padding-left: 0;
+list-style: none;
+}
+
+footer li {
+float: left;
+margin-right: 1.5em;
+margin-bottom: 1.5em;
+}
+ul, ol {
+margin-top: 0;
+margin-bottom: 10.5px;
+}
+footer p {
+clear: left;
+margin-bottom: 0;
+}
+
+footer{
+	padding-top:60px;
+	padding-bottom:40px;
+}
+
+
+/*Search stuff*/
+.sb-search {
+	position: relative;
+	margin-top: 10px;
+	width: 0%;
+	min-width: 60px;
+	height: 60px;
+	float: right;
+	overflow: hidden;
+	-webkit-transition: width 0.3s;
+	-moz-transition: width 0.3s;
+	transition: width 0.3s;
+	-webkit-backface-visibility: hidden;
+}
+
+.sb-search-input {
+	border: none;
+	outline: none;
+	background: #fff;
+	width: 100%;
+	height: 60px;
+	margin: 0;
+	z-index: 10;
+	padding: 20px 65px 20px 20px;
+	font-family: inherit;
+	font-size: 20px;
+	color: #2c3e50;
+}
+
+input[type="search"].sb-search-input {
+	-webkit-appearance: none;
+	-webkit-border-radius: 0px;
+}
+
+.sb-search-input::-webkit-input-placeholder {
+	color: #bdc3c7;
+}
+
+.sb-search-input:-moz-placeholder {
+	color: #bdc3c7;
+}
+
+.sb-search-input::-moz-placeholder {
+	color: #bdc3c7;
+}
+
+.sb-search-input:-ms-input-placeholder {
+	color: #bdc3c7;
+}
+
+.sb-icon-search,
+.sb-search-submit  {
+	width: 60px;
+	height: 60px;
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 0;
+	margin: 0;
+	line-height: 60px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.sb-search-submit {
+	background: #fff; /* IE needs this */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; /* IE 8 */
+    filter: alpha(opacity=0); /* IE 5-7 */
+    opacity: 0;
+	color: transparent;
+	border: none;
+	outline: none;
+	z-index: 100;
+}
+
+.sb-icon-search {
+	color: #fff;
+	background: #f1c40f;
+	z-index: 90;
+	font-size: 22px;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	-webkit-font-smoothing: antialiased;
+}
+
+
+/* Open state */
+.sb-search.sb-search-open,
+.no-js .sb-search {
+	width: 100%;
+}
+
+.sb-search.sb-search-open .sb-icon-search,
+.no-js .sb-search .sb-icon-search {
+	background: #da6d0d;
+	color: #fff;
+	z-index: 11;
+}
+
+.sb-search.sb-search-open .sb-search-submit,
+.no-js .sb-search .sb-search-submit {
+	z-index: 90;
+}
