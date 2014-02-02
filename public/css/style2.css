@@ -1,3 +1,30 @@
+.my-search {
+ width: 195px;
+ -moz-transition: width 0.5s ease-out;
+ -webkit-transition: width 0.5s ease-out;
+ transition: width 0.5s ease-out;
+ background-color: transparent;
+ border: 0px !important;
+ border-color: transparent;
+}
+.my-search:focus {
+ width: 250px;
+ -moz-transition: width 0.5s ease-out;
+ -webkit-transition: width 0.5s ease-out;
+ transition: width 0.5s ease-out;
+ border: 0px !important;
+}
+/* all */
+.my-search::-webkit-input-placeholder { color: #4d7522; }
+.my-search::-moz-placeholder { color: #4d7522; } /* firefox 19+ */
+.my-search:-ms-input-placeholder { color: #4d7522; } /* ie */
+.my-search:-moz-placeholder { color: #4d7522; }
+
+
+button.my-search-btn{
+	background: transparent;
+}
+
 .vote, .vote-score {
 clear: both;
 text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
@@ -11,6 +38,13 @@ font-weight: 300;
 .vote i{
 	font-size:1.2em !important;
 }
+
+.navbar-nav{
+	margin-top:22px;
+}
+ .navbar-form{
+ margin-top:22px;
+ }
 
 .vote-score{
 	margin-top:-5px;
@@ -45,6 +79,13 @@ a:hover.ibtn, a:focus.ibtn {
   background: rgba(114, 173, 50, 1.0);
 }
 
+.navbar-inverse .navbar-nav > li > a {
+	color: black;
+}
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .navbar-nav > li > a.current {
+	color: #44681e;
+}
+
 
 .btn-default {
   color: #333;
@@ -72,12 +113,7 @@ a:hover.ibtn, a:focus.ibtn {
     margin: 0 auto;
 }
 
-.form-control{
-  border: 1px solid #dce4ec !important;
-}
-.form-control:focus {
-  border: 1px solid #f1c40f !important;
-}
+
 
 hr{
   border-top: 1px solid rgba(0,0,0,0.05);
@@ -121,9 +157,10 @@ input, .input-group-addon{
     top: 0; right: 0; bottom: 0; left: 0;
     padding-top:80px;
     */
-    padding-top:80px;
+    margin-top:130px;
     height:400px;
     background-color: #81c439;
+    
 }
 
 
@@ -305,4 +342,11 @@ input[type="search"].sb-search-input {
 .sb-search.sb-search-open .sb-search-submit,
 .no-js .sb-search .sb-search-submit {
   z-index: 90;
+}
+
+.form-control{
+  border: 1px solid #dce4ec ;
+}
+.form-control:focus {
+  border: 1px solid #f1c40f ;
 }

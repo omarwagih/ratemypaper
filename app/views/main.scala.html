@@ -51,18 +51,26 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="@routes.Application.index">RATEMYPAPER</a>
+          <a class="navbar-brand" href="@routes.Application.index"><img src="@routes.Assets.at("img/logo2.svg")" style="height:75px"></a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li><a class="@("current".when(title == "About"))" href="@routes.Application.about">About</a></li>
             <li><a class="@("current".when(title == "Search"))" href="@routes.Application.search">Search</a></li>
-            <li><a class="@("current".when(title == "Top Papers"))" href="@routes.Application.top">Top Papers</a></li>
+            <li><a class="@("current".when(title == "Top papers"))" href="@routes.Application.top">Top Papers</a></li>
           </ul>
+          
+          
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="@routes.Application.login">Log in</a></li>
-            <li><a href="@routes.Application.signup">Sign up</a></li>
+            <li><a class="@("current".when(title == "Login"))" href="@routes.Application.login">Log in</a></li>
+            <!-- <li><a class="@@("current".when(title == "Sign up"))" href="@routes.Application.signup">Sign up</a></li> -->
+            
           </ul>
+          @helper.form(action = routes.Application.search, 'id -> "searchForm", 'class-> "navbar-form navbar-right") {
+            <input type="text" class="form-control my-search input-lg" name="q" id="q" placeholder="Search Pubmed">
+            <button class="my-search-btn" style="margin-left:-15px"><i class="fa fa-search"></i></button>
+          }
+          
         </div><!--/.nav-collapse -->
       </div>
     </div>
@@ -75,7 +83,7 @@
 	    </div>
     </div>
 	}
-    <div class="container" @if(title != "Home"){style="margin-top:120px"}else{style="margin-top:30px"}>
+    <div class="container" @if(title != "Home"){style="margin-top:140px"}else{style="margin-top:50px"}>
 
       @content
 
