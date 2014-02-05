@@ -35,7 +35,7 @@
         <br>
         @helper.form(action = routes.Application.search, 'id -> "searchForm") {
 				
-				<div class="input-group input-group-lg">
+				<div class="hide input-group input-group-lg">
   <input type="text" class="form-control" name="q" id="q" value="@q" placeholder="Enter your search query...">
   <span class="input-group-addon clickable" onclick="$('#searchForm').submit()"><i class="fa fa-search"></i></span>
 </div>
