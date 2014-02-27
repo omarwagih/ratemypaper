@@ -1,4 +1,8 @@
 @(title: String)(content: Html)
+
+@import be.objectify.deadbolt.java.views.html._
+@import be.objectify.deadbolt.core.utils.TemplateUtils._
+
 <!DOCTYPE html>
 <!-- saved from url=(0050)http://getbootstrap.com/examples/navbar-fixed-top/ -->
 <html lang="en">
@@ -62,8 +66,22 @@
           
           
           <ul class="nav navbar-nav navbar-right">
-            <li><a class="@("current".when(title == "Login"))" href="@routes.Application.login">Log in</a></li>
-            <!-- <li><a class="@@("current".when(title == "Sign up"))" href="@routes.Application.signup">Sign up</a></li> -->
+              @subjectPresentOr() {
+                @defining(Application.getLocalUser(session())) { user =>
+                <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+                  <i class="icon-user"></i> @user.name
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="@routes.Application.profile()">@Messages("playauthenticate.navigation.profile")</a></li>
+                  <li><a href="@routes.Account.link()">@Messages("playauthenticate.navigation.link_more")</a></li>
+                  <li class="divider"></li>
+                  <li><a href="@com.feth.play.module.pa.controllers.routes.Authenticate.logout()"><i class="icon-off"></i> @Messages("playauthenticate.navigation.logout")</a></li>
+                </ul>
+                }
+              }{
+                <a href="@routes.Application.login()" class="btn btn-primary btn-mini">@Messages("playauthenticate.navigation.login")</a>
+              }
             
           </ul>
           @helper.form(action = routes.Application.search, 'id -> "searchForm", 'class-> "navbar-form navbar-right") {
@@ -79,7 +97,8 @@
     <div class="header">
 	    <div class="container">
 	    <h3 style="color:white">Some promo here</h3><br>
-	    <button class="btn btn-lg btn-green">Sign up now</button>
+	    <!-- <button class="btn btn-lg btn-green">Sign up now</button> -->
+	    <div><a class="btn btn-lg btn-green" href="@routes.Application.signup()">Sign up now</a></div>
 	    </div>
     </div>
 	}
